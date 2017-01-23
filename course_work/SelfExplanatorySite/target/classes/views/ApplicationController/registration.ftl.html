@@ -1,0 +1,13 @@
+<#import "../layout/defaultLayout.ftl.html" as layout>
+<@layout.myLayout "Register">
+<html>
+<form action="/registration" method="post">
+	<label>Username</label> <br> <input id="username"
+		name="username" type="text" value="${(flash.username)!""}"> <br>
+	<label>Password</label> <br> <input id="password" name="password"
+		type="text"> <br> <label>Email</label> <br>
+	<input type="email" id="email" name="email" type="text"> <br>
+	<br> <input type="submit" value="Register me!" /> <br> <br>
+</form>
+</html>
+</@layout.myLayout>

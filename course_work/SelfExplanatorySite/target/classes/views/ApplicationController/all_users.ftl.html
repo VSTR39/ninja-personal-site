@@ -1,0 +1,36 @@
+<#import "../layout/adminLayout.ftl.html" as layout>
+<@layout.myLayout "Home page">
+
+<html>
+<link rel="stylesheet" href="/assets/css/custom.css">
+<#if (session.username)??>
+
+	        <table id = "users" style="width:100%">
+			
+	        <tr>
+	         <th>ID </th>
+	        <th>Username </th>
+	        <th>Email </th>
+	        <th>Password</th>
+	        </tr>
+	        <#list users as user>
+	        <tr>
+	        <td>
+	        ${user.id}
+	        </td>
+	        <td>
+	        <a href="/user/${user.id}" target="_blank"> ${user.username} </a>
+	        </td>
+	        <td>${user.email}</td>
+	        <td>${user.password}</td></tr>
+	        </#list>
+	        </table>
+  			
+  			<br>
+		
+</#if>
+    </html>
+
+
+
+</@layout.myLayout>

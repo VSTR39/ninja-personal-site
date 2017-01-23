@@ -1,0 +1,10 @@
+<#import "../layout/adminLayout.ftl.html" as layout>
+<@layout.myLayout "Home">
+<html>
+<form action="/deletePost" method="post">
+	<label>Title:</label> <br> <input id="title"
+		name="title" type="text"> <br>
+	<br> <input type="submit" value="Delete Post" /> <br> <br>
+</form>
+</html>
+</@layout.myLayout>

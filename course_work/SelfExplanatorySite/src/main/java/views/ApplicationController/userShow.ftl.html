@@ -1,0 +1,17 @@
+<#import "../layout/adminLayout.ftl.html" as layout> 
+<@layout.myLayout "Home page">    
+    
+    
+<#if user??>
+	
+    <h1>ID:${user.id}</h1>
+    <h1>Username:${user.username}</h1>  
+    <h1>Email:${user.email}</h1>  
+    <h1>Password:${user.password}</h1>    
+    
+</#if>
+    
+
+     
+
+</@layout.myLayout>

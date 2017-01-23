@@ -1,0 +1,14 @@
+<#import "../layout/userLayout.ftl.html" as layout> 
+<@layout.myLayout "Home page">    
+    
+    
+<#if article??>
+
+    <h1>${article.title}</h1> 
+    ${article.content}
+    <br>
+
+</#if>
+     
+
+</@layout.myLayout>

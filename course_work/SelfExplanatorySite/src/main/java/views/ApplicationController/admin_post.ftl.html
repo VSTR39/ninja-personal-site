@@ -1,0 +1,31 @@
+<#import "../layout/adminLayout.ftl.html" as layout>
+<@layout.myLayout "About">
+<html>
+<form action="/admin_post" method="post" class="form-horizontal"
+	role="form">
+
+	<div class="form-group">
+		<label for="section" class="col-lg-2 control-label">${i18n("articleNew.section")}</label>
+		<div class="col-lg-10">
+			<input type="text" name="section" id="section" class="form-control" /><br>
+		</div>
+		
+		<label for="title" class="col-lg-2 control-label">${i18n("articleNew.title")}</label>
+		<div class="col-lg-10">
+			<input type="text" name="title" id="title"  class="form-control" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="content" class="col-lg-2 control-label">${i18n("articleNew.content")}</label>
+		<div class="col-lg-10">
+			<textarea name="content" class="form-control" id="content">${(flash.content!"")}</textarea>
+		</div>
+	</div>
+
+	<input type="submit" value=${i18n(
+		"articleNew.postNewArticle")} class="btn btn-success pull-right" />
+
+</form>
+</html>
+</@layout.myLayout>

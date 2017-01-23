@@ -1,0 +1,33 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target=".navbar-collapse">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/">${i18n("header.home")}</a></li>
+			</ul>
+			<ul class="navbar-right nav navbar-nav">
+			<#if (session.username)??>
+				<li><a href="/java">${i18n("header.java")}</a></li>
+				<li><a href="/ninja">${i18n("header.ninja")}</a></li> 
+				<li><a href="/python">${i18n("header.python")}</a></li> 
+				<li><a href="/c_plus_plus">${i18n("header.c_plus_plus")}</a></li> 
+				<li><a href="/c_sharp">${i18n("header.c_sharp")}</a></li> 
+				<li><a href="/about_me">${i18n("header.about_me")}</a></li> 
+				<li><a href="/contacts">${i18n("header.contacts")}</a></li>  
+                <li><a href="#">${session.username}</a></li>
+                <li><a href="/logout">${i18n("header.logout")}</a></li>               
+            <#else>
+                
+                <li><a href="/" id="login">${i18n("header.login")}</a></li>
+            </#if>
+		</div>
+
+		<!--/.navbar-collapse -->
+	</div>
+</div>

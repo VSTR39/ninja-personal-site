@@ -1,0 +1,7 @@
+models/LoginInformation.class
+controllers/LoginController.class
+conf/Module.class
+conf/Routes.class
+entities/registered_users.class
+controllers/ApplicationController.class
+dao/UserDao.class

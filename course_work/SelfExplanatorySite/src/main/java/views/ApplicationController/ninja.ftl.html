@@ -1,0 +1,20 @@
+<#import "../layout/userLayout.ftl.html" as layout>
+<@layout.myLayout "Home">
+<html>
+<form>
+	<#if posts??>
+
+    <div class="jumbotron">
+        <#list posts as post>
+	        
+  			<h3><a href="/article/${post.id}" target="_blank"> ${post.title} </a><h3>
+  			<p>${post.content}</p>
+  			<p>${post.timestamp}</p>
+  			<br>
+</#list>
+    </div>
+</#if>
+</form>
+
+</html>
+</@layout.myLayout>
